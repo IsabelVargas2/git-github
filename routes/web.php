@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
+Route::get('/contacto', function () {
+    return view("formulario");
+});
+
+
+
 Route::get('/', function () {
     
     echo "************ VARIABLES Y TIPOS DE VARIABLES ************** <br><br>";
