@@ -35,7 +35,22 @@ Route::get('/', function () {
     $messege .= " ".($isLogin? "Ya estas logueado":"No estas logueado")."<br>";
 
     echo $messege;
+    echo"<br>";
+    echo "********************* FUNCIONES ******************* <br><br>";
 
+    echo printUser(age : $age, name : $name);
 
-
+    printUserWithCallBack(name : $name, age: $age, callable: function(){
+        echo "Esta es una función callback, saludos!!! <br>";
+    });
 });
+
+
+function printUser(string $name, int $age){
+    return "El nombre del usuario es $name y su edad es $age años <br>";
+}
+
+function printUserWithCallBack(string $name, int $age, callable $callable){
+    echo "soy $name y tengo $age años <br>";
+    $callable()
+}
