@@ -345,7 +345,7 @@
     
     <div class="container">
         <h1>Hablemos ✨</h1>
-        <form>
+        <form action="{{route('contacto.store')}}" method="GET">
             <div class="form-group">
                 <label for="nombre">Tu nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required>
